@@ -1,0 +1,38 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="260dp"
+    android:height="260dp"
+    android:viewportWidth="260"
+    android:viewportHeight="260">
+    <path
+        android:fillColor="#1FFFFFFF"
+        android:pathData="M130,16 a114,114 0 1,0 0.01,0 z" />
+    <path
+        android:fillColor="#14FFFFFF"
+        android:pathData="M130,46 a84,84 0 1,0 0.01,0 z" />
+    <!-- folder -->
+    <path
+        android:fillColor="#FCD34D"
+        android:pathData="M62,86 h46 l14,16 h76 a10,10 0 0 1 10,10 v70 a10,10 0 0 1 -10,10 h-126 a10,10 0 0 1 -10,-10 v-86 a10,10 0 0 1 10,-10 z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M62,110 h136 a10,10 0 0 1 10,10 v62 a10,10 0 0 1 -10,10 h-136 a10,10 0 0 1 -10,-10 v-62 a10,10 0 0 1 10,-10 z" />
+    <path
+        android:fillColor="#E3F4EC"
+        android:pathData="M62,130 h136 v52 a10,10 0 0 1 -10,10 h-116 a10,10 0 0 1 -10,-10 z" />
+    <!-- shield badge -->
+    <path
+        android:fillColor="#0B7A55"
+        android:pathData="M184,138 l30,11 v22 c0,18 -13,29 -30,34 -17,-5 -30,-16 -30,-34 v-22 z" />
+    <path
+        android:pathData="M171,172 l9,9 17,-18"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M214,66 l4,10 10,4 -10,4 -4,10 -4,-10 -10,-4 10,-4 z" />
+    <path
+        android:fillColor="#FCD34D"
+        android:pathData="M44,62 l3,7 7,3 -7,3 -3,7 -3,-7 -7,-3 7,-3 z" />
+</vector>

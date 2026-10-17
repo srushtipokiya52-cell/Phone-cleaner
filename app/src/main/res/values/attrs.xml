@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RingView">
+        <attr name="ringStroke" format="dimension" />
+        <attr name="ringTrack" format="color" />
+        <attr name="ringFill" format="color" />
+    </declare-styleable>
+</resources>

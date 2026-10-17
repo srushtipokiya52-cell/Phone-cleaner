@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Translated strings are looked up by name at runtime (core/Tr.kt), so resource shrinking must keep them. -->
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@string/tr_*,@string/app_name"
+    tools:shrinkMode="lenient" />

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/row"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="64dp"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/bg_tile"
+        android:importantForAccessibility="no"
+        android:padding="9dp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/Txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.phone.cleanerapp.storage.mediafiles.ui.AutoHideTextView
+            android:id="@+id/sub"
+            style="@style/Txt.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/trail"
+        style="@style/Txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/spin"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:indicatorColor="@color/brand"
+        app:indicatorSize="22dp"
+        app:trackColor="@color/brand_ring"
+        app:trackThickness="3dp" />
+
+    <ImageView
+        android:id="@+id/status"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:importantForAccessibility="no"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/check"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@null"
+        android:button="@drawable/bg_check_box"
+        android:clickable="false"
+        android:focusable="false"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:visibility="gone" />
+</LinearLayout>

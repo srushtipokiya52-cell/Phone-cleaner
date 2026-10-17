@@ -1,0 +1,84 @@
+Done||पूर्ण||પૂર્ણ||Listo||Terminé||Fertig||Concluído||تم||Selesai||Готово
+Free up even more||और जगह खाली करें||હજી વધુ જગ્યા ખાલી કરો||Libera aún más espacio||Libérez encore plus d'espace||Noch mehr Platz schaffen||Libere ainda mais espaço||وفّر مساحة أكثر||Bebaskan lebih banyak ruang||Освободите ещё больше места
+Move to SD||SD में ले जाएँ||SD માં ખસેડો||Mover a SD||Déplacer vers SD||Auf SD verschieben||Mover para SD||نقل إلى SD||Pindah ke SD||Перенести на SD
+All tools||सभी टूल्स||બધા ટૂલ્સ||Todas las herramientas||Tous les outils||Alle Tools||Todas as ferramentas||كل الأدوات||Semua alat||Все инструменты
+Clean Junk Now||अभी जंक साफ़ करें||હમણાં જંક સાફ કરો||Limpiar ahora||Nettoyer maintenant||Jetzt bereinigen||Limpar agora||نظّف الآن||Bersihkan sekarang||Очистить сейчас
+Clean up||सफ़ाई||સફાઈ||Limpieza||Nettoyage||Aufräumen||Limpeza||التنظيف||Pembersihan||Очистка
+More tools||और टूल्स||વધુ ટૂલ્સ||Más herramientas||Plus d'outils||Weitere Tools||Mais ferramentas||المزيد من الأدوات||Alat lainnya||Другие инструменты
+Phone Cleaner||फ़ोन क्लीनर||ફોન ક્લીનર||Limpiador de móvil||Nettoyeur de téléphone||Handy-Reiniger||Limpador de celular||منظّف الهاتف||Pembersih Ponsel||Очистка телефона
+Get Started||शुरू करें||શરૂ કરો||Empezar||Commencer||Los geht's||Começar||ابدأ||Mulai||Начать
+Skip||छोड़ें||છોડો||Omitir||Passer||Überspringen||Pular||تخطي||Lewati||Пропустить
+Junk found||मिला जंक||મળેલ જંક||Basura encontrada||Fichiers inutiles trouvés||Gefundener Datenmüll||Lixo encontrado||ملفات غير مفيدة||Sampah ditemukan||Найден мусор
+Safe to remove. Photos, chats and documents are not touched.||हटाना सुरक्षित है। फ़ोटो, चैट और दस्तावेज़ों को नहीं छुआ जाता।||દૂર કરવું સલામત છે. ફોટા, ચેટ અને દસ્તાવેજોને અડવામાં આવતા નથી.||Es seguro eliminarlo. Las fotos, chats y documentos no se tocan.||Suppression sans risque. Les photos, discussions et documents ne sont pas touchés.||Sicher zu entfernen. Fotos, Chats und Dokumente bleiben unberührt.||Seguro remover. Fotos, conversas e documentos não são tocados.||آمن للحذف. لا يتم المساس بالصور والمحادثات والمستندات.||Aman dihapus. Foto, obrolan, dan dokumen tidak disentuh.||Удалять безопасно. Фото, чаты и документы не затрагиваются.
+Choose your language||अपनी भाषा चुनें||તમારી ભાષા પસંદ કરો||Elige tu idioma||Choisissez votre langue||Sprache wählen||Escolha seu idioma||اختر لغتك||Pilih bahasa Anda||Выберите язык
+Continue||जारी रखें||ચાલુ રાખો||Continuar||Continuer||Weiter||Continuar||متابعة||Lanjutkan||Продолжить
+You can change it anytime from Settings.||आप इसे कभी भी सेटिंग्स से बदल सकते हैं।||તમે તેને ગમે ત્યારે સેટિંગ્સમાંથી બદલી શકો છો.||Puedes cambiarlo en cualquier momento desde Ajustes.||Vous pouvez la modifier à tout moment dans les Réglages.||Du kannst sie jederzeit in den Einstellungen ändern.||Você pode mudar a qualquer momento nas Configurações.||يمكنك تغييرها في أي وقت من الإعدادات.||Anda dapat mengubahnya kapan saja di Pengaturan.||Её можно изменить в любое время в настройках.
+Allow file access||फ़ाइल एक्सेस की अनुमति दें||ફાઇલ એક્સેસની મંજૂરી આપો||Permitir acceso a archivos||Autoriser l'accès aux fichiers||Dateizugriff erlauben||Permitir acesso a arquivos||السماح بالوصول إلى الملفات||Izinkan akses file||Разрешить доступ к файлам
+Allow||अनुमति दें||મંજૂરી આપો||Permitir||Autoriser||Erlauben||Permitir||سماح||Izinkan||Разрешить
+Maybe later||शायद बाद में||કદાચ પછી||Quizás más tarde||Plus tard||Vielleicht später||Talvez depois||ربما لاحقًا||Mungkin nanti||Может быть, позже
+Phone Cleaner needs access to your files to find junk and free up space. Everything stays on your phone.||जंक ढूँढने और जगह खाली करने के लिए फ़ोन क्लीनर को आपकी फ़ाइलों तक पहुँच चाहिए। सब कुछ आपके फ़ोन में ही रहता है।||જંક શોધવા અને જગ્યા ખાલી કરવા માટે ફોન ક્લીનરને તમારી ફાઇલોની એક્સેસ જોઈએ છે. બધું તમારા ફોનમાં જ રહે છે.||El limpiador necesita acceso a tus archivos para encontrar basura y liberar espacio. Todo se queda en tu móvil.||Le nettoyeur a besoin d'accéder à vos fichiers pour trouver les fichiers inutiles et libérer de l'espace. Tout reste sur votre téléphone.||Der Handy-Reiniger braucht Zugriff auf deine Dateien, um Datenmüll zu finden und Platz zu schaffen. Alles bleibt auf deinem Handy.||O limpador precisa acessar seus arquivos para encontrar lixo e liberar espaço. Tudo fica no seu celular.||يحتاج التطبيق إلى الوصول إلى ملفاتك للعثور على الملفات غير المفيدة وتحرير المساحة. كل شيء يبقى على هاتفك.||Aplikasi memerlukan akses ke file Anda untuk menemukan sampah dan mengosongkan ruang. Semuanya tetap di ponsel Anda.||Приложению нужен доступ к вашим файлам, чтобы находить мусор и освобождать место. Всё остаётся на вашем телефоне.
+Deleted photos go to Recycle Bin for 30 days||हटाई गई फ़ोटो 30 दिनों तक रीसायकल बिन में रहती हैं||કાઢી નાખેલા ફોટા 30 દિવસ સુધી રિસાયકલ બિનમાં રહે છે||Las fotos eliminadas van a la papelera durante 30 días||Les photos supprimées restent 30 jours dans la corbeille||Gelöschte Fotos bleiben 30 Tage im Papierkorb||Fotos excluídas ficam na lixeira por 30 dias||تبقى الصور المحذوفة في سلة المحذوفات لمدة 30 يومًا||Foto yang dihapus disimpan di Tempat Sampah selama 30 hari||Удалённые фото хранятся в корзине 30 дней
+Found so far||अब तक मिला||અત્યાર સુધી મળ્યું||Encontrado hasta ahora||Trouvé jusqu'ici||Bisher gefunden||Encontrado até agora||تم العثور عليه حتى الآن||Ditemukan sejauh ini||Найдено на данный момент
+See results||नतीजे देखें||પરિણામો જુઓ||Ver resultados||Voir les résultats||Ergebnisse ansehen||Ver resultados||عرض النتائج||Lihat hasil||Показать результаты
+Stop||रोकें||રોકો||Detener||Arrêter||Stopp||Parar||إيقاف||Berhenti||Стоп
+Settings||सेटिंग्स||સેટિંગ્સ||Ajustes||Réglages||Einstellungen||Configurações||الإعدادات||Pengaturan||Настройки
+Clean · Boost · Cool · Protect||साफ़ · तेज़ · ठंडा · सुरक्षित||સાફ · ઝડપી · ઠંડુ · સુરક્ષિત||Limpia · Acelera · Enfría · Protege||Nettoie · Booste · Refroidit · Protège||Reinigen · Beschleunigen · Kühlen · Schützen||Limpe · Acelere · Resfrie · Proteja||نظّف · سرّع · بدّد الحرارة · احمِ||Bersihkan · Percepat · Dinginkan · Lindungi||Чистить · Ускорять · Охлаждать · Защищать
+Optimizing your experience…||आपका अनुभव बेहतर बना रहे हैं…||તમારો અનુભવ સુધારી રહ્યા છીએ…||Optimizando tu experiencia…||Optimisation de votre expérience…||Wir optimieren dein Erlebnis…||Otimizando sua experiência…||جارٍ تحسين تجربتك…||Mengoptimalkan pengalaman Anda…||Оптимизируем ваш опыт…
+Storage||स्टोरेज||સ્ટોરેજ||Almacenamiento||Stockage||Speicher||Armazenamento||التخزين||Penyimpanan||Память
+used||उपयोग में||વપરાયેલ||usado||utilisé||belegt||usado||مستخدم||terpakai||занято
+All Tools||सभी टूल्स||બધા ટૂલ્સ||Todas las herramientas||Tous les outils||Alle Tools||Todas as ferramentas||كل الأدوات||Semua Alat||Все инструменты
+Best||सर्वश्रेष्ठ||શ્રેષ્ઠ||Mejor||Meilleure||Beste||Melhor||الأفضل||Terbaik||Лучшее
+Home||होम||હોમ||Inicio||Accueil||Start||Início||الرئيسية||Beranda||Главная
+Tools||टूल्स||ટૂલ્સ||Herramientas||Outils||Tools||Ferramentas||الأدوات||Alat||Инструменты
+Files||फ़ाइलें||ફાઇલો||Archivos||Fichiers||Dateien||Arquivos||الملفات||File||Файлы
+Good morning||सुप्रभात||સુપ્રભાત||Buenos días||Bonjour||Guten Morgen||Bom dia||صباح الخير||Selamat pagi||Доброе утро
+Good afternoon||शुभ दोपहर||શુભ બપોર||Buenas tardes||Bon après-midi||Guten Tag||Boa tarde||طاب يومك||Selamat siang||Добрый день
+Good evening||शुभ संध्या||શુભ સંધ્યા||Buenas noches||Bonsoir||Guten Abend||Boa noite||مساء الخير||Selamat malam||Добрый вечер
+Used||उपयोग में||વપરાયેલ||Usado||Utilisé||Belegt||Usado||مستخدم||Terpakai||Занято
+Junk||जंक||જંક||Basura||Fichiers inutiles||Datenmüll||Lixo||ملفات غير مفيدة||Sampah||Мусор
+Free||खाली||ખાલી||Libre||Libre||Frei||Livre||متاح||Kosong||Свободно
+Battery||बैटरी||બેટરી||Batería||Batterie||Akku||Bateria||البطارية||Baterai||Батарея
+Boost||बूस्ट||બૂસ્ટ||Acelerar||Booster||Boost||Acelerar||تسريع||Percepat||Ускорить
+Cool down||ठंडा करें||ઠંડુ કરો||Enfriar||Refroidir||Abkühlen||Resfriar||تبريد||Dinginkan||Охладить
+Details||विवरण||વિગતો||Detalles||Détails||Details||Detalhes||التفاصيل||Detail||Подробности
+Similar Photos||मिलती-जुलती फ़ोटो||સમાન ફોટા||Fotos similares||Photos similaires||Ähnliche Fotos||Fotos semelhantes||صور متشابهة||Foto Serupa||Похожие фото
+Large Files||बड़ी फ़ाइलें||મોટી ફાઇલો||Archivos grandes||Gros fichiers||Große Dateien||Arquivos grandes||ملفات كبيرة||File Besar||Большие файлы
+Chat Media||चैट मीडिया||ચેટ મીડિયા||Multimedia de chats||Médias des discussions||Chat-Medien||Mídia de conversas||وسائط الدردشة||Media Obrolan||Медиа из чатов
+App Manager||ऐप मैनेजर||એપ મેનેજર||Gestor de apps||Gestionnaire d'applis||App-Manager||Gerenciador de apps||مدير التطبيقات||Pengelola Aplikasi||Менеджер приложений
+Compress||कंप्रेस||કમ્પ્રેસ||Comprimir||Compresser||Komprimieren||Comprimir||ضغط||Kompres||Сжатие
+Contacts||संपर्क||સંપર્કો||Contactos||Contacts||Kontakte||Contatos||جهات الاتصال||Kontak||Контакты
+Notifications||सूचनाएँ||સૂચનાઓ||Notificaciones||Notifications||Benachrichtigungen||Notificações||الإشعارات||Notifikasi||Уведомления
+Tap to scan||स्कैन के लिए टैप करें||સ્કેન કરવા ટૅપ કરો||Toca para escanear||Touchez pour analyser||Zum Scannen tippen||Toque para escanear||اضغط للفحص||Ketuk untuk memindai||Нажмите для сканирования
+Auto-clean is on||ऑटो-क्लीन चालू है||ઓટો-ક્લીન ચાલુ છે||La limpieza automática está activada||Le nettoyage auto est activé||Auto-Bereinigung ist an||A limpeza automática está ativada||التنظيف التلقائي مفعّل||Bersih otomatis aktif||Автоочистка включена
+Auto-clean is off||ऑटो-क्लीन बंद है||ઓટો-ક્લીન બંધ છે||La limpieza automática está desactivada||Le nettoyage auto est désactivé||Auto-Bereinigung ist aus||A limpeza automática está desativada||التنظيف التلقائي متوقف||Bersih otomatis nonaktif||Автоочистка выключена
+Junk is cleaned every week||जंक हर हफ़्ते साफ़ होता है||જંક દર અઠવાડિયે સાફ થાય છે||La basura se limpia cada semana||Les fichiers inutiles sont nettoyés chaque semaine||Datenmüll wird jede Woche bereinigt||O lixo é limpo toda semana||يتم تنظيف الملفات غير المفيدة كل أسبوع||Sampah dibersihkan setiap minggu||Мусор очищается каждую неделю
+Clean junk every week on its own||हर हफ़्ते जंक अपने आप साफ़ करें||દર અઠવાડિયે જંક આપમેળે સાફ કરો||Limpia la basura cada semana automáticamente||Nettoyez automatiquement chaque semaine||Datenmüll wöchentlich automatisch bereinigen||Limpe o lixo automaticamente toda semana||نظّف الملفات غير المفيدة تلقائيًا كل أسبوع||Bersihkan sampah otomatis tiap minggu||Автоматически очищайте мусор каждую неделю
+Manage||प्रबंधित करें||મેનેજ કરો||Gestionar||Gérer||Verwalten||Gerenciar||إدارة||Kelola||Управлять
+Turn on||चालू करें||ચાલુ કરો||Activar||Activer||Einschalten||Ativar||تفعيل||Aktifkan||Включить
+Junk Clean||जंक क्लीन||જંક ક્લીન||Limpieza de basura||Nettoyage||Datenmüll bereinigen||Limpeza de lixo||تنظيف الملفات||Bersihkan Sampah||Очистка мусора
+Starting…||शुरू हो रहा है…||શરૂ થઈ રહ્યું છે…||Iniciando…||Démarrage…||Wird gestartet…||Iniciando…||جارٍ البدء…||Memulai…||Запуск…
+Scan complete||स्कैन पूरा हुआ||સ્કેન પૂર્ણ થયું||Escaneo completado||Analyse terminée||Scan abgeschlossen||Escaneamento concluído||اكتمل الفحص||Pemindaian selesai||Сканирование завершено
+Scan finished||स्कैन समाप्त||સ્કેન પૂરું થયું||Escaneo finalizado||Analyse terminée||Scan beendet||Escaneamento finalizado||انتهى الفحص||Pemindaian selesai||Сканирование окончено
+Scan Results||स्कैन के नतीजे||સ્કેન પરિણામો||Resultados del escaneo||Résultats de l'analyse||Scan-Ergebnisse||Resultados do escaneamento||نتائج الفحص||Hasil Pemindaian||Результаты сканирования
+Deselect all||सभी हटाएँ||બધા પસંદગી રદ કરો||Deseleccionar todo||Tout désélectionner||Alle abwählen||Desmarcar tudo||إلغاء تحديد الكل||Batalkan semua||Снять выбор
+Select all||सभी चुनें||બધા પસંદ કરો||Seleccionar todo||Tout sélectionner||Alle auswählen||Selecionar tudo||تحديد الكل||Pilih semua||Выбрать все
+Cleaning…||सफ़ाई हो रही है…||સફાઈ ચાલુ છે…||Limpiando…||Nettoyage…||Wird bereinigt…||Limpando…||جارٍ التنظيف…||Membersihkan…||Очистка…
+Free now||अभी खाली||હવે ખાલી||Libre ahora||Libre maintenant||Jetzt frei||Livre agora||متاح الآن||Kosong sekarang||Свободно сейчас
+Files removed||हटाई गई फ़ाइलें||દૂર કરેલી ફાઇલો||Archivos eliminados||Fichiers supprimés||Entfernte Dateien||Arquivos removidos||ملفات محذوفة||File dihapus||Удалено файлов
+Empty folders||खाली फ़ोल्डर||ખાલી ફોલ્ડર||Carpetas vacías||Dossiers vides||Leere Ordner||Pastas vazias||مجلدات فارغة||Folder kosong||Пустые папки
+All clean||सब साफ़||બધું સાફ||Todo limpio||Tout est propre||Alles sauber||Tudo limpo||كل شيء نظيف||Semua bersih||Всё чисто
+Nothing to remove right now.||अभी हटाने के लिए कुछ नहीं है।||હમણાં દૂર કરવા માટે કંઈ નથી.||No hay nada que eliminar ahora.||Rien à supprimer pour le moment.||Im Moment gibt es nichts zu entfernen.||Nada para remover agora.||لا يوجد ما يُحذف الآن.||Tidak ada yang perlu dihapus sekarang.||Сейчас нечего удалять.
+Similar photos||मिलती-जुलती फ़ोटो||સમાન ફોટા||Fotos similares||Photos similaires||Ähnliche Fotos||Fotos semelhantes||صور متشابهة||Foto serupa||Похожие фото
+Review look-alike shots||मिलते-जुलते शॉट देखें||સમાન શૉટ્સ જુઓ||Revisa fotos parecidas||Passez en revue les photos similaires||Ähnliche Aufnahmen prüfen||Revise fotos parecidas||راجع اللقطات المتشابهة||Tinjau foto yang mirip||Просмотрите похожие снимки
+Boost memory||मेमोरी बूस्ट करें||મેમરી બૂસ્ટ કરો||Acelerar memoria||Booster la mémoire||Speicher beschleunigen||Acelerar memória||تسريع الذاكرة||Percepat memori||Ускорить память
+Stop apps running in background||बैकग्राउंड में चल रहे ऐप बंद करें||બેકગ્રાઉન્ડમાં ચાલતી એપ બંધ કરો||Detén apps en segundo plano||Arrêtez les applis en arrière-plan||Hintergrund-Apps beenden||Pare apps em segundo plano||أوقف التطبيقات العاملة في الخلفية||Hentikan aplikasi di latar belakang||Остановите фоновые приложения
+Review||देखें||જુઓ||Revisar||Voir||Prüfen||Revisar||مراجعة||Tinjau||Проверить
+App cache||ऐप कैश||એપ કેશ||Caché de apps||Cache des applis||App-Cache||Cache de apps||ذاكرة التطبيقات المؤقتة||Cache aplikasi||Кэш приложений
+Temporary data apps rebuild on their own||अस्थायी डेटा जिसे ऐप खुद दोबारा बना लेते हैं||અસ્થાયી ડેટા જે એપ્સ જાતે ફરી બનાવે છે||Datos temporales que las apps regeneran||Données temporaires que les applis recréent||Temporäre Daten, die Apps selbst neu erstellen||Dados temporários que os apps recriam||بيانات مؤقتة تعيد التطبيقات إنشاءها||Data sementara yang dibuat ulang aplikasi||Временные данные, которые приложения создают заново
+Residual files||बचे हुए फ़ाइलें||બાકી રહેલી ફાઇલો||Archivos residuales||Fichiers résiduels||Restdateien||Arquivos residuais||ملفات متبقية||File sisa||Остаточные файлы
+Logs, backups and thumbnails nobody uses||लॉग, बैकअप और थंबनेल जिन्हें कोई इस्तेमाल नहीं करता||લોગ, બેકઅપ અને થંબનેલ જેનો કોઈ ઉપયોગ કરતું નથી||Registros, copias y miniaturas sin uso||Journaux, sauvegardes et miniatures inutilisés||Protokolle, Backups und Vorschaubilder, die niemand braucht||Logs, backups e miniaturas sem uso||سجلات ونسخ احتياطية وصور مصغّرة غير مستخدمة||Log, cadangan, dan thumbnail yang tak terpakai||Журналы, резервные копии и миниатюры, которые никому не нужны
+Obsolete APKs||पुराने APK||જૂની APK||APK obsoletos||APK obsolètes||Veraltete APKs||APKs obsoletos||ملفات APK قديمة||APK usang||Устаревшие APK
+Installers you've already used||वे इंस्टॉलर जो आप पहले इस्तेमाल कर चुके हैं||ઇન્સ્ટોલર જે તમે પહેલેથી વાપરી લીધા છે||Instaladores que ya usaste||Installateurs déjà utilisés||Installationsdateien, die du schon genutzt hast||Instaladores que você já usou||ملفات تثبيت استخدمتها بالفعل||Installer yang sudah Anda pakai||Установщики, которые вы уже использовали
+Temporary files||अस्थायी फ़ाइलें||અસ્થાયી ફાઇલો||Archivos temporales||Fichiers temporaires||Temporäre Dateien||Arquivos temporários||ملفات مؤقتة||File sementara||Временные файлы
+Leftovers from downloads and editing||डाउनलोड और एडिटिंग के बचे हुए हिस्से||ડાઉનલોડ અને એડિટિંગના બચેલા ભાગ||Restos de descargas y ediciones||Restes de téléchargements et de modifications||Überbleibsel von Downloads und Bearbeitung||Restos de downloads e edições||بقايا التنزيلات والتحرير||Sisa unduhan dan penyuntingan||Остатки загрузок и редактирования
+Folders with nothing inside||बिना किसी सामग्री वाले फ़ोल्डर||અંદર કંઈ ન હોય તેવા ફોલ્ડર||Carpetas sin contenido||Dossiers sans contenu||Ordner ohne Inhalt||Pastas sem conteúdo||مجلدات لا تحتوي على شيء||Folder tanpa isi||Папки без содержимого

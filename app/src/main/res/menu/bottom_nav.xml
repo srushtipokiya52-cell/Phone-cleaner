@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment" android:icon="@drawable/ic_home" android:title="@string/tr_Home" />
+    <item android:id="@+id/toolsFragment" android:icon="@drawable/ic_grid" android:title="@string/tr_Tools" />
+    <item android:id="@+id/storageFragment" android:icon="@drawable/ic_folder" android:title="@string/tr_Files" />
+    <item android:id="@+id/settingsFragment" android:icon="@drawable/ic_sliders" android:title="@string/tr_Settings" />
+</menu>

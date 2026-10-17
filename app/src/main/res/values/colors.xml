@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="brand">#0B7A55</color>
+    <color name="brand_dark">#0B5D41</color>
+    <color name="brand_deep">#065F46</color>
+    <color name="brand_tint">#E3F4EC</color>
+    <color name="brand_ring">#DCEFE6</color>
+    <color name="brand_soft">#D1FAE5</color>
+
+    <color name="bg">#F4F7F6</color>
+    <color name="card">#FFFFFF</color>
+    <color name="border">#E2E8F0</color>
+    <color name="divider">#F1F5F9</color>
+    <color name="ink">#0F172A</color>
+    <color name="muted">#475569</color>
+    <color name="hint">#CBD5E1</color>
+
+    <color name="amber">#F59E0B</color>
+    <color name="amber_tint">#FEF3C7</color>
+    <color name="amber_dark">#B45309</color>
+    <color name="amber_text">#92400E</color>
+    <color name="cyan">#0E7490</color>
+    <color name="cyan_tint">#E0F2F7</color>
+    <color name="violet">#6D28D9</color>
+    <color name="violet_tint">#EDE9FE</color>
+    <color name="pink">#BE185D</color>
+    <color name="pink_tint">#FCE7F3</color>
+    <color name="red">#B91C1C</color>
+    <color name="red_tint">#FEE2E2</color>
+</resources>

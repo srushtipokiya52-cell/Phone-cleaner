@@ -1,0 +1,27 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="280dp" android:height="280dp" android:viewportWidth="280" android:viewportHeight="280">
+    <path android:fillColor="#1FFFFFFF" android:pathData="M140,20 a120,120 0 1,0 0.01,0 z" />
+    <path android:fillColor="#14FFFFFF" android:pathData="M140,50 a90,90 0 1,0 0.01,0 z" />
+    <!-- back card -->
+    <group android:rotation="-12" android:pivotX="140" android:pivotY="140">
+        <path android:fillColor="#CFEFF6" android:pathData="M72,56 h80 a10,10 0 0 1 10,10 v108 a10,10 0 0 1 -10,10 h-80 a10,10 0 0 1 -10,-10 v-108 a10,10 0 0 1 10,-10 z" />
+    </group>
+    <group android:rotation="10" android:pivotX="140" android:pivotY="140">
+        <path android:fillColor="#E7F7FB" android:pathData="M128,66 h80 a10,10 0 0 1 10,10 v108 a10,10 0 0 1 -10,10 h-80 a10,10 0 0 1 -10,-10 v-108 a10,10 0 0 1 10,-10 z" />
+    </group>
+    <!-- front card -->
+    <path android:fillColor="#FFFFFF" android:pathData="M98,50 h84 a12,12 0 0 1 12,12 v136 a12,12 0 0 1 -12,12 h-84 a12,12 0 0 1 -12,-12 v-136 a12,12 0 0 1 12,-12 z" />
+    <path android:fillColor="#BFE7F2" android:pathData="M98,62 h84 a4,4 0 0 1 4,4 v92 h-92 v-92 a4,4 0 0 1 4,-4 z" />
+    <path android:fillColor="#FCD34D" android:pathData="M158,86 a11,11 0 1,0 0.01,0 z" />
+    <path android:fillColor="#0E7490" android:pathData="M94,158 l30,-44 24,32 14,-16 24,28 z" />
+    <path android:fillColor="#0B7A55" android:pathData="M94,158 l18,-26 20,26 z" />
+    <path android:fillColor="#E2E8F0" android:pathData="M100,176 h50 a3,3 0 0 1 3,3 v0 a3,3 0 0 1 -3,3 h-50 a3,3 0 0 1 -3,-3 v0 a3,3 0 0 1 3,-3 z" />
+    <path android:fillColor="#E2E8F0" android:pathData="M100,190 h30 a3,3 0 0 1 3,3 v0 a3,3 0 0 1 -3,3 h-30 a3,3 0 0 1 -3,-3 v0 a3,3 0 0 1 3,-3 z" />
+    <!-- keep badge -->
+    <path android:fillColor="#0B7A55" android:pathData="M190,196 a22,22 0 1,0 0.01,0 z" />
+    <path android:pathData="M180,198 l7,7 13,-14" android:strokeColor="#FFFFFF" android:strokeWidth="4" android:strokeLineCap="round" android:strokeLineJoin="round" />
+    <!-- trash badge -->
+    <path android:fillColor="#FFFFFF" android:pathData="M58,214 a20,20 0 1,0 0.01,0 z" />
+    <path android:pathData="M49,208 h18 M54,208 l1,12 h8 l1,-12 M56,208 v-4 h6 v4" android:strokeColor="#B91C1C" android:strokeWidth="2.4" android:strokeLineCap="round" android:strokeLineJoin="round" />
+    <path android:fillColor="#FCD34D" android:pathData="M232,66 l4,10 10,4 -10,4 -4,10 -4,-10 -10,-4 10,-4 z" />
+</vector>

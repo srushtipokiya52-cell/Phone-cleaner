@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment android:id="@+id/splashFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.SplashFragment" />
+    <fragment android:id="@+id/languageFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.LanguageFragment" />
+    <fragment android:id="@+id/introFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.IntroFragment" />
+    <fragment android:id="@+id/permissionFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.PermissionFragment" />
+    <fragment android:id="@+id/homeFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.HomeFragment" />
+    <fragment android:id="@+id/scanFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.ScanFragment" />
+    <fragment android:id="@+id/junkResultsFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.JunkResultsFragment" />
+    <fragment android:id="@+id/cleanDoneFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.CleanDoneFragment" />
+    <fragment android:id="@+id/storageFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.StorageFragment" />
+    <fragment android:id="@+id/toolsFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.ToolsFragment" />
+    <fragment android:id="@+id/photosFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.PhotosFragment" />
+    <fragment android:id="@+id/fileListFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.FileListFragment">
+        <argument android:name="app" android:defaultValue="" app:argType="string" />
+        <argument android:name="category" android:defaultValue="" app:argType="string" />
+    </fragment>
+    <fragment android:id="@+id/chatMediaFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.ChatMediaFragment" />
+    <fragment android:id="@+id/compressorFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.CompressorFragment" />
+    <fragment android:id="@+id/contactsFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.ContactsFragment" />
+    <fragment android:id="@+id/boosterFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.BoosterFragment" />
+    <fragment android:id="@+id/coolerFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.CoolerFragment" />
+    <fragment android:id="@+id/batteryFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.BatteryFragment" />
+    <fragment android:id="@+id/appsFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.AppsFragment" />
+    <fragment android:id="@+id/notificationsFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.NotificationsFragment" />
+    <fragment android:id="@+id/settingsFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.SettingsFragment" />
+</navigation>
