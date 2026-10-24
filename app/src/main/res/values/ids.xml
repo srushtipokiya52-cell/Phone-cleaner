@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="skeleton_saved" type="id" />
+    <item name="fr_banner" type="id" />
 </resources>

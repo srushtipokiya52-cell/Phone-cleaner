@@ -1,4 +1,14 @@
 [versions]
+sdk_ads = "v_1.0.0"
+userMessagingPlatform = "3.1.0"
+firebaseBom = "34.17.0"
+shimmer = "0.5.0"
+moshi = "1.15.2"
+lifecycleProcess = "2.8.7"
+timber = "5.0.1"
+multidex = "2.0.1"
+gson = "2.10.1"
+googleGmsGoogleServices = "4.5.0"
 agp = "9.0.1"
 coreKtx = "1.16.0"
 junit = "4.13.2"
@@ -15,6 +25,17 @@ work = "2.10.1"
 coil = "2.7.0"
 
 [libraries]
+sdk-ads = { module = "com.github.gurjieflabs:sdk_ads", version.ref = "sdk_ads" }
+user-messaging-platform = { group = "com.google.android.ump", name = "user-messaging-platform", version.ref = "userMessagingPlatform" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-config = { group = "com.google.firebase", name = "firebase-config" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics" }
+shimmer = { group = "com.facebook.shimmer", name = "shimmer", version.ref = "shimmer" }
+moshi-kotlin = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
+androidx-lifecycle-process = { group = "androidx.lifecycle", name = "lifecycle-process", version.ref = "lifecycleProcess" }
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+multidex = { group = "androidx.multidex", name = "multidex", version.ref = "multidex" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -33,4 +54,5 @@ kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutin
 coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
 
 [plugins]
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 android-application = { id = "com.android.application", version.ref = "agp" }

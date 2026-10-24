@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 23c/23d card: #FFF8EC, radius 28, 1.5px ring rgba(255,214,130,.7) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="#FFF8EC" />
+    <stroke android:width="1.5dp" android:color="#B3FFD682" />
+    <corners android:radius="28dp" />
+</shape>

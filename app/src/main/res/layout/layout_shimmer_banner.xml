@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/shimmer_banner"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    app:shimmer_auto_start="true"
+    app:shimmer_base_alpha="0.8"
+    app:shimmer_highlight_alpha="0.3">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/home_card_border" />
+</com.facebook.shimmer.ShimmerFrameLayout>

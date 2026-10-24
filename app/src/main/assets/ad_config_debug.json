@@ -1,0 +1,331 @@
+{
+  "inter_splash": {
+    "id": "ca-app-pub-3940256099942544/1033173712",
+    "isEnable": true,
+    "enable_ua_check": false
+  },
+  "inter_splash_uninstall": {
+    "id": "ca-app-pub-3940256099942544/1033173712",
+    "isEnable": true,
+    "enable_ua_check": false
+  },
+  "native_call_end": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 44,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "media",
+      "body",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "banner_splash": {
+    "id": "ca-app-pub-3940256099942544/9214589741",
+    "isEnable": true,
+    "reloadIntervalSeconds": 30,
+    "enable_ua_check": false
+  },
+  "banner_splash_uninstall": {
+    "id": "ca-app-pub-3940256099942544/9214589741",
+    "isEnable": true,
+    "reloadIntervalSeconds": 30,
+    "enable_ua_check": false
+  },
+  "open_resume": {
+    "id": "ca-app-pub-3940256099942544/9257395921",
+    "isEnable": true,
+    "enable_ua_check": false
+  },
+  "native_language_1": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 45,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "body",
+      "media",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_language_2": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 45,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "body",
+      "media",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_onboarding_1_1": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 45,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "body",
+      "media",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_onboarding_2_1": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 45,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "body",
+      "media",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_onboarding_1_3": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 45,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "body",
+      "media",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_onboarding_2_3": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 45,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "body",
+      "media",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_onboarding_fullscreen_1_3": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 45,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "media",
+      "icon_headline",
+      "body",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_onboarding_fullscreen_2_3": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 45,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "media",
+      "icon_headline",
+      "body",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_full": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 45,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "media",
+      "icon_headline",
+      "body",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_home": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 45,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "body",
+      "media",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_charging_medium": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 42,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "media",
+      "body",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_jap_reminder": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 40,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "body",
+      "media",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "inter_charging": {
+    "id": "ca-app-pub-3940256099942544/1033173712",
+    "isEnable": true,
+    "enable_ua_check": false
+  },
+  "banner_home": {
+    "id": "ca-app-pub-3940256099942544/9214589741",
+    "isEnable": true,
+    "reloadIntervalSeconds": 30,
+    "enable_ua_check": false
+  },
+  "inter_onboarding": {
+    "id": "ca-app-pub-3940256099942544/1033173712",
+    "isEnable": true,
+    "enable_ua_check": false
+  },
+  "native_welcome": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 40,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "body",
+      "media",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_japa": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "reloadIntervalSeconds": 30,
+    "colorCTA": "default",
+    "heightCTA": 48,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "body",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_wallpaper": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "reloadIntervalSeconds": 30,
+    "colorCTA": "default",
+    "heightCTA": 48,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "body",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_wallpaper_preview": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "reloadIntervalSeconds": 30,
+    "colorCTA": "default",
+    "heightCTA": 48,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "body",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "inter_call_end": {
+    "id": "ca-app-pub-3940256099942544/1033173712",
+    "isEnable": false,
+    "enable_ua_check": false
+  },
+  "reward_wallpaper": {
+    "id": "ca-app-pub-3940256099942544/5224354917",
+    "isEnable": true,
+    "enable_ua_check": false
+  },
+  "inter_home": {
+    "id": "ca-app-pub-3940256099942544/1033173712",
+    "isEnable": true,
+    "enable_ua_check": false
+  },
+  "reward_example": {
+    "id": "ca-app-pub-3940256099942544/5224354917",
+    "isEnable": true,
+    "enable_ua_check": false
+  },
+  "native_tools": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 45,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "body",
+      "media",
+      "cta"
+    ],
+    "enable_ua_check": false
+  },
+  "native_settings": {
+    "id": "ca-app-pub-3940256099942544/2247696110",
+    "isEnable": true,
+    "colorCTA": "default",
+    "heightCTA": 45,
+    "positionCTA": "BOTTOM",
+    "components": [
+      "icon_headline",
+      "body",
+      "media",
+      "cta"
+    ],
+    "enable_ua_check": false
+  }
+}

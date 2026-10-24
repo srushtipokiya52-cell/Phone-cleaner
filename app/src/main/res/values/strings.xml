@@ -306,4 +306,13 @@
     <string name="tr_1_s_contacts_share_2_s">%1$s contacts share %2$s</string>
     <string name="tr_Used_1_s_Free_2_s_Total_3_s">Used %1$s · Free %2$s · Total %3$s</string>
     <string name="tr_1_s_freed">%1$s freed</string>
+
+    <!-- sdk_ads reads these at init. Placeholders: replace with real tokens before release. -->
+    <string name="adjust_token" translatable="false">placeholder_adjust_token</string>
+    <string name="event_token" translatable="false">placeholder_event_token</string>
+    <string name="facebook_app_id" translatable="false">0000000000</string>
+    <string name="facebook_client_token" translatable="false">placeholder_client_token</string>
+    <string name="sponsored">Sponsored</string>
+    <string name="reward_loading">Loading ad…</string>
+    <string name="reward_loading_hi">Loading ad…</string>
 </resources>

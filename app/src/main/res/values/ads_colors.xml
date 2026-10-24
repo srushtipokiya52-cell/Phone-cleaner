@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="home_bg_warm">#FFF8EE</color>
+    <color name="home_card_bg">#FFFFFF</color>
+    <color name="home_card_border">#F5EBD7</color>
+    <color name="home_saffron">#E87500</color>
+    <color name="home_text_primary">#3B2A20</color>
+    <color name="home_text_secondary">#76665A</color>
+</resources>

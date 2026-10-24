@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Native ad for the 21a after-call sheet: icon 40 + headline 13.5 / "Ad" badge + Sponsored,
+     media flex (radius 14), body 11.5/1.4, 44px #123A5A pill CTA, 9dp gaps. The sheet itself
+     (#F7FAF9, radius 24 at the top, padding 12 14 22) is in activity_call_end. -->
+<com.google.android.gms.ads.nativead.NativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="HardcodedText,SpUsage">
+
+    <LinearLayout
+        android:id="@+id/ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/block_icon_headline"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ad_app_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_call_end_ad_icon"
+                android:clipToOutline="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView android:textStyle="bold"
+                    android:id="@+id/ad_headline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:textColor="#0F2233"
+                    android:textSize="13.5sp"
+                    tools:text="Advertiser headline goes here" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView android:textStyle="bold"
+                        android:id="@+id/ad_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_call_end_ad_badge"
+                        android:includeFontPadding="false"
+                        android:paddingHorizontal="4dp"
+                        android:paddingVertical="1dp"
+                        android:text="Ad"
+                        android:textColor="#FFFFFF"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:id="@+id/ad_advertiser"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="@string/sponsored"
+                        android:textColor="#5D7380"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.gms.ads.nativead.MediaView
+            android:id="@+id/ad_media"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="9dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_call_end_ad_media"
+            android:clipToOutline="true" />
+
+        <TextView
+            android:id="@+id/ad_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="1.4"
+            android:maxLines="2"
+            android:textColor="#40566A"
+            android:textSize="11.5sp"
+            tools:text="Short advertiser body text that describes the offer in one or two lines." />
+
+        <androidx.appcompat.widget.AppCompatButton android:textStyle="bold"
+            android:id="@+id/ad_call_to_action"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/bg_call_end_ad_cta"
+            android:minHeight="0dp"
+            android:stateListAnimator="@null"
+            android:textAllCaps="false"
+            android:textColor="#F6FBFA"
+            android:textSize="14sp"
+            tools:text="Install" />
+    </LinearLayout>
+</com.google.android.gms.ads.nativead.NativeAdView>

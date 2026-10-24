@@ -1,5 +1,10 @@
 package com.phone.cleanerapp.storage.mediafiles.ui
 
+import com.ads.AdRemoteConfig
+import com.ads.AdsManager
+import com.ads.module.billing.AppPurchase
+import com.ads.native_home
+import com.ads.populateNativeAdView
 import com.phone.cleanerapp.storage.mediafiles.core.tr
 import com.phone.cleanerapp.storage.mediafiles.core.trf
 
@@ -25,6 +30,24 @@ import java.util.Calendar
 
 class HomeFragment : VBFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
 
+    /** Medium native under the Clean Junk card. Shimmer first; the slot is removed when there is no ad. */
+    private fun setupHomeAd() {
+        val activity = requireActivity()
+        val slot = b.layoutAdHome
+        val cfg = AdRemoteConfig.native_home
+        if (!cfg.isEnable || AppPurchase.getInstance().isPurchased(activity)) { slot.visibility = View.GONE; return }
+        val shimmer = b.shimmerAds.shimmerNativeMedium
+        shimmer.startShimmer()
+        AdsManager.loadNativeHomeCard(activity, R.layout.layout_native_ad_medium).observe(viewLifecycleOwner) { ad ->
+            if (ad != null && (ad.admobNativeAd != null || ad.nativeView != null)) {
+                populateNativeAdView(activity, ad, b.adHolder, shimmer)
+            } else {
+                shimmer.stopShimmer()
+                slot.visibility = View.GONE
+            }
+        }
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val ctx = requireContext()
         val h = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
@@ -34,6 +57,7 @@ class HomeFragment : VBFragment<FragmentHomeBinding>(FragmentHomeBinding::inflat
             else -> tr("Good evening")
         }
         b.btnAllTools.onClick { go(R.id.toolsFragment) }
+        setupHomeAd()
         b.btnClean.onClick { if (Perms.hasFiles(ctx)) go(R.id.scanFragment) else go(R.id.permissionFragment) }
 
         legend(b.legendUsed, R.color.brand, tr("Used"))

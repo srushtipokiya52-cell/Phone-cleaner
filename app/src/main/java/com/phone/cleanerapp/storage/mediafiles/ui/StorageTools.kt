@@ -1,5 +1,10 @@
 package com.phone.cleanerapp.storage.mediafiles.ui
 
+import com.ads.AdRemoteConfig
+import com.ads.AdsManager
+import com.ads.module.billing.AppPurchase
+import com.ads.native_tools
+import com.ads.populateNativeAdView
 import com.phone.cleanerapp.storage.mediafiles.core.tr
 import com.phone.cleanerapp.storage.mediafiles.core.trf
 
@@ -102,7 +107,28 @@ class ToolsFragment : VBFragment<FragmentToolsBinding>(FragmentToolsBinding::inf
 
     private class Tool(val name: String, val icon: Int, val tone: Tone, val dest: Int, val args: Bundle? = null)
 
+    /** Medium native under the title. Shimmer first; the slot is removed when there is no ad. */
+    private fun setupToolsAd() {
+        val activity = requireActivity()
+        val slot = b.layoutAdTools
+        if (!AdRemoteConfig.native_tools.isEnable || AppPurchase.getInstance().isPurchased(activity)) {
+            slot.visibility = View.GONE
+            return
+        }
+        val shimmer = b.shimmerAds.shimmerNativeMedium
+        shimmer.startShimmer()
+        AdsManager.loadNativeTools(activity, R.layout.layout_native_ad_medium).observe(viewLifecycleOwner) { ad ->
+            if (ad != null && (ad.admobNativeAd != null || ad.nativeView != null)) {
+                populateNativeAdView(activity, ad, b.adHolder, shimmer)
+            } else {
+                shimmer.stopShimmer()
+                slot.visibility = View.GONE
+            }
+        }
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        setupToolsAd()
         group(
             tr("Clean up"), listOf(
                 Tool(tr("Junk Clean"), R.drawable.ic_clean, Tone.GREEN, R.id.scanFragment),

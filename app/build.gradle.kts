@@ -1,6 +1,10 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.gms.google.services) apply false
 }
+
+// Firebase needs app/google-services.json (from the Firebase console); build without it until added
+if (file("google-services.json").exists()) apply(plugin = "com.google.gms.google-services")
 
 android {
     namespace = "com.phone.cleanerapp.storage.mediafiles"
@@ -12,6 +16,7 @@ android {
         applicationId = "com.phone.cleanerapp.storage.mediafiles"
         minSdk = 24
         targetSdk = 36
+        multiDexEnabled = true
         versionCode = 1
         versionName = "1.0.0"
 
@@ -51,7 +56,20 @@ dependencies {
     implementation(libs.androidx.work)
     implementation(libs.kotlinx.coroutines)
     implementation(libs.coil)
+    // Ads core
+    implementation(libs.sdk.ads)
     implementation(libs.play.services.ads)
+    implementation(libs.user.messaging.platform)
+    implementation(libs.shimmer)
+    // Remote Config overrides + analytics
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.config)
+    implementation(libs.firebase.analytics)
+    implementation(libs.androidx.lifecycle.process)
+    implementation(libs.moshi.kotlin)
+    implementation(libs.gson)
+    implementation(libs.timber)
+    implementation(libs.multidex)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

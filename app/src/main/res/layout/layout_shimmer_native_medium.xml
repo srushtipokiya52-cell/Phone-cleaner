@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shimmer_native_medium"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_native_small_card"
+    app:shimmer_auto_start="true"
+    app:shimmer_base_alpha="0.8"
+    app:shimmer_direction="left_to_right"
+    app:shimmer_duration="1200"
+    app:shimmer_highlight_alpha="0.3">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/block_icon_headline"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@id/ad_media"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/ad_app_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_ad_app_icon_kumkum" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/ad_headline"
+                    android:layout_width="120dp"
+                    android:layout_height="14dp"
+                    android:background="@drawable/bg_conner_home"
+                    android:backgroundTint="#EFE5D4" />
+
+                <View
+                    android:id="@+id/ad_advertiser"
+                    android:layout_width="80dp"
+                    android:layout_height="12dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_conner_home"
+                    android:backgroundTint="#EFE5D4" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/ad_media"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_ad_media_kumkum"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/ad_body"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/ad_call_to_action"
+            app:layout_constraintEnd_toStartOf="@id/ad_media"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/block_icon_headline">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@drawable/bg_conner_home"
+                android:backgroundTint="#EFE5D4" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_conner_home"
+                android:backgroundTint="#EFE5D4" />
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_conner_home"
+                android:backgroundTint="#EFE5D4" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/ad_call_to_action"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_ad_cta_kumkum"
+            android:backgroundTint="#EFE5D4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ad_media" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.facebook.shimmer.ShimmerFrameLayout>

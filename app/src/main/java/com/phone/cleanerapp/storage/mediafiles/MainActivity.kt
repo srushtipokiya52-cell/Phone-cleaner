@@ -3,26 +3,34 @@ package com.phone.cleanerapp.storage.mediafiles
 import android.os.Build
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import com.phone.cleanerapp.storage.mediafiles.core.AdBanner
+import com.ads.AdRemoteConfig
+import com.ads.banner_home
+import com.itg.template.ui.bases.BannerConfig
+import com.itg.template.ui.bases.BaseActivityWithBanner
 import com.phone.cleanerapp.storage.mediafiles.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivityWithBanner() {
+
+    override val bannerConfig get() = BannerConfig(adUnitConfig = AdRemoteConfig.banner_home, isCollapse = false)
 
     private lateinit var b: ActivityMainBinding
-    private lateinit var ads: AdBanner
     private var topInset = 0
     private var bottomInset = 0
     private var bottomNavShown = false
+    private var bannerLoaded = false
+    private var currentDest = 0
 
     private val tabs = setOf(R.id.homeFragment, R.id.toolsFragment, R.id.storageFragment, R.id.settingsFragment)
-    private val noAds = setOf(R.id.splashFragment, R.id.languageFragment, R.id.introFragment, R.id.permissionFragment, R.id.scanFragment)
+    private val noAds = setOf(R.id.splashFragment, R.id.languageFragment, R.id.introFragment, R.id.onboardingFullFragment, R.id.permissionFragment, R.id.scanFragment)
+
+    // No banner on splash, language, onboarding, permission or scan: onboarding shows natives only
+    override fun isBannerAllowed() = currentDest != 0 && currentDest !in noAds
 
     /** Colours and icon style of the status bar (top) and navigation bar (bottom) for one screen. */
     private class Bars(val top: Int, val bottom: Int, val lightStatusIcons: Boolean, val lightNavIcons: Boolean)
@@ -45,19 +53,25 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        ads = AdBanner(this, b.adContainer)
-        ads.start()
-
         val nav = (supportFragmentManager.findFragmentById(R.id.navHost) as NavHostFragment).navController
         b.bottomNav.setupWithNavController(nav)
         b.bottomNav.setOnItemReselectedListener { }
         nav.addOnDestinationChangedListener { _, dest, _ ->
+            currentDest = dest.id
             bottomNavShown = dest.id in tabs
             val vis = if (bottomNavShown) View.VISIBLE else View.GONE
             b.bottomNav.visibility = vis
             b.navDivider.visibility = vis
             val adShown = dest.id !in noAds
-            b.adContainer.visibility = if (adShown) View.VISIBLE else View.GONE
+            b.frBanner.visibility = if (adShown) View.VISIBLE else View.GONE
+            // The splash has finished Remote Config by now, so banner_home holds its final value;
+            // loading earlier would use the cached/bundled JSON. Load once, on the first screen with an ad.
+            if (adShown && !bannerLoaded) {
+                bannerLoaded = true
+                loadBanner()
+            } else if (!adShown) {
+                loadBanner()   // isBannerAllowed() is false here: hides the slot and stops reloads
+            }
             apply(barsFor(dest.id, adShown))
             applySpaces()
         }
@@ -92,18 +106,4 @@ class MainActivity : AppCompatActivity() {
         b.navSpace.layoutParams = b.navSpace.layoutParams.also { it.height = if (bottomNavShown) 0 else bottomInset }
     }
 
-    override fun onPause() {
-        ads.pause()
-        super.onPause()
-    }
-
-    override fun onResume() {
-        super.onResume()
-        ads.resume()
-    }
-
-    override fun onDestroy() {
-        ads.destroy()
-        super.onDestroy()
-    }
 }

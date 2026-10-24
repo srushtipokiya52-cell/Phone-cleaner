@@ -1,5 +1,10 @@
 package com.phone.cleanerapp.storage.mediafiles.ui
 
+import com.ads.AdRemoteConfig
+import com.ads.AdsManager
+import com.ads.module.billing.AppPurchase
+import com.ads.native_settings
+import com.ads.populateNativeAdView
 import com.phone.cleanerapp.storage.mediafiles.core.tr
 import com.phone.cleanerapp.storage.mediafiles.core.trf
 
@@ -24,8 +29,40 @@ import com.phone.cleanerapp.storage.mediafiles.service.MaintenanceWorker
 
 class SettingsFragment : VBFragment<FragmentSettingsBinding>(FragmentSettingsBinding::inflate) {
 
+    // The sections are rebuilt on every resume, so the ad slot is created once and re-inserted each time
+    private var adSlot: View? = null
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        setupSettingsAd()
         onEachResume { build() }
+    }
+
+    /** Medium native under the Cleaning card. Shimmer first; the slot is dropped when there is no ad. */
+    private fun setupSettingsAd() {
+        val activity = requireActivity()
+        if (!AdRemoteConfig.native_settings.isEnable || AppPurchase.getInstance().isPurchased(activity)) return
+        val slot = layoutInflater.inflate(R.layout.view_native_card_slot, b.container, false)
+        val shimmer = slot.findViewById<com.facebook.shimmer.ShimmerFrameLayout>(R.id.shimmer_native_medium)
+        val holder = slot.findViewById<android.widget.FrameLayout>(R.id.adHolder)
+        slot.layoutParams = (slot.layoutParams as android.widget.LinearLayout.LayoutParams).apply { topMargin = requireContext().dp(20) }
+        adSlot = slot
+        shimmer.startShimmer()
+        AdsManager.loadNativeSettings(activity, R.layout.layout_native_ad_medium).observe(viewLifecycleOwner) { ad ->
+            if (ad != null && (ad.admobNativeAd != null || ad.nativeView != null)) {
+                populateNativeAdView(activity, ad, holder, shimmer)
+            } else {
+                shimmer.stopShimmer()
+                (slot.parent as? android.view.ViewGroup)?.removeView(slot)
+                adSlot = null
+            }
+        }
+        build()
+    }
+
+    private fun placeAd() {
+        val slot = adSlot ?: return
+        (slot.parent as? android.view.ViewGroup)?.removeView(slot)
+        b.container.addView(slot)
     }
 
     private fun build() {
@@ -52,6 +89,7 @@ class SettingsFragment : VBFragment<FragmentSettingsBinding>(FragmentSettingsBin
                 toast(tr("Deleted photos stay in your phone's Recycle Bin for 30 days"))
             }
         }
+        placeAd()
         section(tr("General")) {
             item(R.drawable.ic_globe, Tone.CYAN, tr("Language"), lang, tr("Change")) { go(R.id.languageFragment) }
             item(R.drawable.ic_shield, Tone.GREEN, tr("Permissions"), tr("Review what the app can access"), tr("Manage")) { go(R.id.permissionFragment) }

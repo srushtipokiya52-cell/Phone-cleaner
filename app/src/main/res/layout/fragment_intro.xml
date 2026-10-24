@@ -96,4 +96,10 @@
                 android:visibility="gone" />
         </FrameLayout>
     </LinearLayout>
+
+    <include
+        android:id="@+id/adSheet"
+        layout="@layout/view_ad_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="260dp" />
 </LinearLayout>

@@ -16,5 +16,27 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@string/tr_All_Tools" />
+
+        <!-- Medium native (RC key native_tools): shimmer until loaded, whole slot removed if there is no ad -->
+        <FrameLayout
+            android:id="@+id/layoutAdTools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_card_lg"
+            android:padding="8dp">
+
+            <include
+                android:id="@+id/shimmerAds"
+                layout="@layout/layout_shimmer_native_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@+id/adHolder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </FrameLayout>
     </LinearLayout>
 </ScrollView>

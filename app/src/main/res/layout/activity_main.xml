@@ -24,7 +24,7 @@
         app:navGraph="@navigation/nav_graph" />
 
     <FrameLayout
-        android:id="@+id/adContainer"
+        android:id="@+id/fr_banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/card"

@@ -7,6 +7,7 @@
     <fragment android:id="@+id/splashFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.SplashFragment" />
     <fragment android:id="@+id/languageFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.LanguageFragment" />
     <fragment android:id="@+id/introFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.IntroFragment" />
+    <fragment android:id="@+id/onboardingFullFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.OnboardingFullFragment" />
     <fragment android:id="@+id/permissionFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.PermissionFragment" />
     <fragment android:id="@+id/homeFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.HomeFragment" />
     <fragment android:id="@+id/scanFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.ScanFragment" />

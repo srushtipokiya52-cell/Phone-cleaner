@@ -1,13 +1,13 @@
 package com.phone.cleanerapp.storage.mediafiles
 
-import android.app.Application
+import com.app.GlobalApp
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.os.Build
 import com.phone.cleanerapp.storage.mediafiles.core.Prefs
 import com.phone.cleanerapp.storage.mediafiles.service.MaintenanceWorker
 
-class PhoneCleanerApp : Application() {
+class PhoneCleanerApp : GlobalApp() {
     override fun onCreate() {
         super.onCreate()
         val prefs = Prefs.get(this)

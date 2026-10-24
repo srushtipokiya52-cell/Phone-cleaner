@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Small native (kumkum theme): white card, #3B2414 / #8A6A4C text, gold "Ad" badge, red CTA.
+     View IDs and the ad_container / block_icon_headline structure are what populateNativeAdView
+     reorders, so they stay as they were. -->
+<com.google.android.gms.ads.nativead.NativeAdView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="HardcodedText,SpUsage">
+
+    <LinearLayout
+        android:id="@+id/ad_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_native_small_card"
+        android:orientation="vertical">
+
+        <!-- Block 1: icon, "Ad" badge, headline, advertiser -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/block_icon_headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/ad_app_icon"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="10dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/bg_ad_app_icon_kumkum"
+                android:clipToOutline="true"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView android:textStyle="bold"
+                android:id="@+id/ad_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/bg_ad_icon_kumkum"
+                android:includeFontPadding="false"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:text="Ad"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@id/ad_app_icon"
+                app:layout_constraintTop_toTopOf="@id/ad_app_icon" />
+
+            <TextView android:textStyle="bold"
+                android:id="@+id/ad_headline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="10dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="#3B2414"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@id/ad_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ad_icon"
+                app:layout_constraintTop_toTopOf="@id/ad_icon"
+                tools:text="Headline" />
+
+            <TextView
+                android:id="@+id/ad_advertiser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="#8A6A4C"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="@id/ad_headline"
+                app:layout_constraintStart_toStartOf="@id/ad_icon"
+                app:layout_constraintTop_toBottomOf="@id/ad_icon"
+                tools:text="Ad advertiser" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Block 2: body -->
+        <TextView
+            android:id="@+id/ad_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:lineSpacingMultiplier="1.15"
+            android:maxLines="2"
+            android:textColor="#5A4030"
+            android:textSize="12sp"
+            tools:text="ad body" />
+
+        <!-- Block 3: CTA -->
+        <androidx.appcompat.widget.AppCompatButton android:textStyle="bold"
+            android:id="@+id/ad_call_to_action"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_ad_cta_kumkum"
+            android:includeFontPadding="false"
+            android:minHeight="0dp"
+            android:stateListAnimator="@null"
+            android:textAllCaps="false"
+            android:textColor="#FFF1DC"
+            android:textSize="14sp"
+            tools:text="Install" />
+    </LinearLayout>
+</com.google.android.gms.ads.nativead.NativeAdView>
