@@ -3,7 +3,10 @@ package com.phone.cleanerapp.storage.mediafiles.ui
 import com.phone.cleanerapp.storage.mediafiles.core.tr
 import com.phone.cleanerapp.storage.mediafiles.core.trf
 
+import android.Manifest
 import android.content.Intent
+import com.phone.cleanerapp.storage.mediafiles.core.ScreenPrefs
+import com.phone.cleanerapp.storage.mediafiles.feature.charging.ChargingFeature
 import android.os.Bundle
 import android.view.View
 import androidx.core.content.ContextCompat
@@ -13,6 +16,9 @@ import com.phone.cleanerapp.storage.mediafiles.core.Perms
 import com.phone.cleanerapp.storage.mediafiles.core.Prefs
 import com.phone.cleanerapp.storage.mediafiles.core.go
 import com.phone.cleanerapp.storage.mediafiles.core.onClick
+import com.phone.cleanerapp.storage.mediafiles.core.toast
+import com.phone.cleanerapp.storage.mediafiles.feature.overlay.OverlayPermission
+import com.phone.cleanerapp.storage.mediafiles.feature.overlay.OverlayPermissionSheet
 import com.phone.cleanerapp.storage.mediafiles.data.AppState
 import com.phone.cleanerapp.storage.mediafiles.data.DeviceInfo
 import com.phone.cleanerapp.storage.mediafiles.databinding.FragmentHomeBinding
@@ -24,6 +30,8 @@ import com.phone.cleanerapp.storage.mediafiles.service.MaintenanceWorker
 import java.util.Calendar
 
 class HomeFragment : VBFragment<FragmentHomeBinding>(FragmentHomeBinding::inflate) {
+
+    private val notifLauncher = registerForActivityResult(androidx.activity.result.contract.ActivityResultContracts.RequestPermission()) { }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         val ctx = requireContext()
@@ -68,6 +76,25 @@ class HomeFragment : VBFragment<FragmentHomeBinding>(FragmentHomeBinding::inflat
             }
         }
         onEachResume { refresh() }
+        view.post { maybeAskOverlayPermission() }
+    }
+
+    /** Sessions 2, 5, 8 (see ScreenConfig): ask once for "Display over other apps". */
+    private fun maybeAskOverlayPermission() {
+        if (bOrNull == null || !isAdded) return
+        val ctx = requireContext()
+        OverlayPermission.syncState(ctx)
+        // Alerts need the notification permission (API 33+). Asked once; Settings can ask again.
+        if (!ChargingFeature.canPostNotifications(ctx) && !ScreenPrefs.getBool(ctx, "notif_asked", false)) {
+            ScreenPrefs.putBool(ctx, "notif_asked", true)
+            notifLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+            return
+        }
+        if (!OverlayPermission.shouldAskOnHome(ctx)) return
+        OverlayPermission.markAskedOnHome(ctx)
+        OverlayPermissionSheet(requireActivity(), OverlayPermission.SOURCE_HOME) {
+            if (isAdded) toast(tr("Done! Screens can now open by themselves"))
+        }.show()
     }
 
     private fun refresh() {

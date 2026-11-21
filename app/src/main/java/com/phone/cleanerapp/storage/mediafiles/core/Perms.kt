@@ -15,7 +15,7 @@ import androidx.core.app.NotificationManagerCompat
 
 /** Every permission the app asks for, with a "do we have it" check and the intent that grants it. */
 object Perms {
-    enum class Kind { FILES, USAGE, NOTIF_ACCESS, CONTACTS, ALERTS }
+    enum class Kind { FILES, USAGE, NOTIF_ACCESS, CONTACTS, ALERTS, OVERLAY }
 
     fun has(ctx: Context, kind: Kind): Boolean = when (kind) {
         Kind.FILES -> hasFiles(ctx)
@@ -23,6 +23,7 @@ object Perms {
         Kind.NOTIF_ACCESS -> NotificationManagerCompat.getEnabledListenerPackages(ctx).contains(ctx.packageName)
         Kind.CONTACTS -> hasContacts(ctx)
         Kind.ALERTS -> Build.VERSION.SDK_INT < 33 || granted(ctx, Manifest.permission.POST_NOTIFICATIONS)
+        Kind.OVERLAY -> Build.VERSION.SDK_INT < 29 || Settings.canDrawOverlays(ctx)
     }
 
     fun hasFiles(ctx: Context): Boolean =
@@ -59,6 +60,7 @@ object Perms {
         else null
         Kind.USAGE -> Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS)
         Kind.NOTIF_ACCESS -> Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS)
+        Kind.OVERLAY -> Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:${ctx.packageName}"))
         else -> null
     }
 

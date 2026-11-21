@@ -37,6 +37,9 @@ class MainActivity : AppCompatActivity() {
         b = ActivityMainBinding.inflate(layoutInflater)
         setContentView(b.root)
 
+        // One session per fresh launch (not rotation or process restore)
+        if (savedInstanceState == null) com.phone.cleanerapp.storage.mediafiles.core.AppSession.start(this)
+
         ViewCompat.setOnApplyWindowInsetsListener(b.root) { _, insets ->
             val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             topInset = bars.top

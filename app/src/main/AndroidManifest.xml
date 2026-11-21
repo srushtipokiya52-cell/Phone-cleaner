@@ -24,6 +24,12 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
     <queries>
         <intent>
@@ -34,7 +40,7 @@
 
     <application
         android:name=".PhoneCleanerApp"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
@@ -78,6 +84,48 @@
                 <action android:name="android.service.notification.NotificationListenerService" />
             </intent-filter>
         </service>
+        <!-- Own task affinity so plugging in never brings the rest of the app to the front -->
+        <activity
+            android:name=".feature.charging.ChargingActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:showWhenLocked="true"
+            android:taskAffinity="com.phone.cleanerapp.storage.mediafiles.charging"
+            android:turnScreenOn="true"
+            tools:targetApi="o_mr1" />
+
+        <!-- After-call screen: own task so it never drags the app to the front -->
+        <activity
+            android:name=".feature.callend.CallEndActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:taskAffinity="com.phone.cleanerapp.storage.mediafiles.callend" />
+
+        <service
+            android:name=".feature.charging.ChargeMonitorService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Listens for charger connect and disconnect broadcasts, which Android only delivers to runtime-registered receivers, to show the user-enabled charging status screen, and for the end of a phone call (audio mode change, no phone permission) to show the user-enabled after-call screen." />
+        </service>
+
+        <receiver
+            android:name=".feature.reminder.ReminderReceiver"
+            android:exported="false" />
+
+        <receiver
+            android:name=".feature.charging.BootReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

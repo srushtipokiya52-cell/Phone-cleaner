@@ -3,7 +3,15 @@ package com.phone.cleanerapp.storage.mediafiles.ui
 import com.phone.cleanerapp.storage.mediafiles.core.tr
 import com.phone.cleanerapp.storage.mediafiles.core.trf
 
+import android.Manifest
 import android.content.Intent
+import android.os.Build
+import android.provider.Settings
+import androidx.activity.result.contract.ActivityResultContracts
+import com.phone.cleanerapp.storage.mediafiles.feature.callend.CallEndFeature
+import com.phone.cleanerapp.storage.mediafiles.feature.charging.ChargingFeature
+import com.phone.cleanerapp.storage.mediafiles.feature.overlay.OverlayPermission
+import com.phone.cleanerapp.storage.mediafiles.feature.overlay.OverlayPermissionSheet
 import android.net.Uri
 import android.os.Bundle
 import android.view.View
@@ -46,11 +54,42 @@ class SettingsFragment : VBFragment<FragmentSettingsBinding>(FragmentSettingsBin
                 p.junkReminder = on
                 MaintenanceWorker.schedule(ctx, on || p.autoClean)
             }
+            item(R.drawable.ic_clock, Tone.PINK, tr("Cleaning reminder"), reminderSummary(p), tr("Set")) { go(R.id.reminderFragment) }
             item(R.drawable.ic_file, Tone.CYAN, tr("Large file size"), trf("Over %1\$s MB", p.largeFileMb), tr("Change")) { pickSize() }
             item(R.drawable.ic_folder, Tone.VIOLET, tr("Ignore list"), trf("%1\$s folders", p.ignoredFolders.size), tr("Edit")) { editIgnored() }
             item(R.drawable.ic_trash, Tone.GRAY, tr("Recycle Bin"), tr("Keep 30 days"), "") {
                 toast(tr("Deleted photos stay in your phone's Recycle Bin for 30 days"))
             }
+        }
+        section(tr("Charging & call screens")) {
+            toggle(R.drawable.ic_battery, Tone.GREEN, tr("Charging screen"), tr("Show battery status when you plug in"), ChargingFeature.isEnabled(ctx)) { on ->
+                ChargingFeature.setEnabled(ctx, on)
+                build()
+            }
+            toggle(R.drawable.ic_chat, Tone.CYAN, tr("After-call screen"), tr("Quick actions after a phone call"), CallEndFeature.isUserEnabled(ctx)) { on ->
+                CallEndFeature.setEnabled(ctx, on)
+                build()
+            }
+            val overlayOk = OverlayPermission.isGranted(ctx)
+            item(R.drawable.ic_shield, Tone.AMBER, tr("Display over other apps"),
+                if (overlayOk) tr("Allowed · screens open by themselves") else tr("Needed to open screens while you use your phone"),
+                if (overlayOk) tr("On") else tr("Allow")) {
+                if (overlayOk) openAppSettings() else OverlayPermissionSheet(requireActivity(), OverlayPermission.SOURCE_SETTINGS) { if (isAdded) build() }.show()
+            }
+            val notifOk = ChargingFeature.canPostNotifications(ctx)
+            item(R.drawable.ic_bell, Tone.PINK, tr("Notifications"),
+                if (notifOk) tr("Allowed") else tr("Needed for alerts when the screen cannot open directly"),
+                if (notifOk) tr("On") else tr("Allow")) { askNotifications() }
+            if (Build.VERSION.SDK_INT >= 34) {
+                val fullOk = ChargingFeature.canUseFullScreenIntent(ctx)
+                item(R.drawable.ic_bolt, Tone.VIOLET, tr("Full-screen alerts"),
+                    if (fullOk) tr("Allowed · wakes your locked phone") else tr("Needed to show screens on a locked phone"),
+                    if (fullOk) tr("On") else tr("Allow")) { openFullScreenSettings() }
+            }
+            val batteryOk = ChargingFeature.isIgnoringBatteryOptimizations(ctx)
+            item(R.drawable.ic_clock, Tone.CYAN, tr("Run in background"),
+                if (batteryOk) tr("Unrestricted · works after the app is closed") else tr("Stops the system from pausing the screens"),
+                if (batteryOk) tr("On") else tr("Allow")) { if (batteryOk) openAppSettings() else askBatteryOptimization() }
         }
         section(tr("General")) {
             item(R.drawable.ic_globe, Tone.CYAN, tr("Language"), lang, tr("Change")) { go(R.id.languageFragment) }
@@ -64,6 +103,52 @@ class SettingsFragment : VBFragment<FragmentSettingsBinding>(FragmentSettingsBin
             }
             item(R.drawable.ic_file, Tone.GRAY, tr("Version"), "v${BuildConfig.VERSION_NAME}", "") { }
         }
+    }
+
+
+    private val notifLauncher = registerForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->
+        // Denied twice (or "don't ask again"): the system dialog no longer shows, so go to Settings
+        if (!granted && !shouldShowRequestPermissionRationale(Manifest.permission.POST_NOTIFICATIONS)) openNotificationSettings()
+        if (isAdded) build()
+    }
+
+    private fun askNotifications() {
+        val ctx = requireContext()
+        when {
+            ChargingFeature.canPostNotifications(ctx) -> openNotificationSettings()
+            Build.VERSION.SDK_INT >= 33 -> notifLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+            else -> openNotificationSettings()
+        }
+    }
+
+    private fun openNotificationSettings() = launchSafely(
+        Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS).putExtra(Settings.EXTRA_APP_PACKAGE, requireContext().packageName)
+    )
+
+    private fun openFullScreenSettings() {
+        if (Build.VERSION.SDK_INT >= 34) {
+            launchSafely(Intent(Settings.ACTION_MANAGE_APP_USE_FULL_SCREEN_INTENT, Uri.parse("package:${requireContext().packageName}")))
+        }
+    }
+
+    @android.annotation.SuppressLint("BatteryLife")
+    private fun askBatteryOptimization() {
+        val pkg = Uri.parse("package:${requireContext().packageName}")
+        // The direct dialog first; the full list if this build drops it
+        if (!launchSafely(Intent(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS, pkg))) {
+            launchSafely(Intent(Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS))
+        }
+    }
+
+    private fun openAppSettings() {
+        launchSafely(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, Uri.parse("package:${requireContext().packageName}")))
+    }
+
+    private fun launchSafely(intent: Intent): Boolean = try {
+        startActivity(intent)
+        true
+    } catch (_: Throwable) {
+        false
     }
 
     private fun section(title: String, rows: SectionBuilder.() -> Unit) {
@@ -106,6 +191,13 @@ class SettingsFragment : VBFragment<FragmentSettingsBinding>(FragmentSettingsBin
             r.row.onClick { r.toggle.toggle() }
             card.addView(r.root)
         }
+    }
+
+    private fun reminderSummary(p: Prefs): String {
+        val r = com.phone.cleanerapp.storage.mediafiles.feature.reminder.Reminder.load(requireContext())
+        if (!r.enabled) return tr("Off")
+        val c = java.util.Calendar.getInstance().apply { set(java.util.Calendar.HOUR_OF_DAY, r.hour); set(java.util.Calendar.MINUTE, r.minute) }
+        return trf("Daily at %1\$s", android.text.format.DateFormat.getTimeFormat(requireContext()).format(c.time))
     }
 
     private fun pickSize() {

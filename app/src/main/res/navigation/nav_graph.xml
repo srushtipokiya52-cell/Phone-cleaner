@@ -28,4 +28,5 @@
     <fragment android:id="@+id/appsFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.AppsFragment" />
     <fragment android:id="@+id/notificationsFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.NotificationsFragment" />
     <fragment android:id="@+id/settingsFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.SettingsFragment" />
+    <fragment android:id="@+id/reminderFragment" android:name="com.phone.cleanerapp.storage.mediafiles.ui.ReminderFragment" />
 </navigation>

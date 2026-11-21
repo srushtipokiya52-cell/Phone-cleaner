@@ -7,6 +7,8 @@ import android.animation.ValueAnimator
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import com.phone.cleanerapp.storage.mediafiles.feature.overlay.OverlayPermission
+import com.phone.cleanerapp.storage.mediafiles.feature.overlay.OverlayPermissionSheet
 import android.widget.LinearLayout
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatDelegate
@@ -117,10 +119,22 @@ class IntroFragment : VBFragment<FragmentIntroBinding>(FragmentIntroBinding::inf
     )
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        b.skip.onClick { go(R.id.permissionFragment) }
+        b.skip.onClick { finishIntro() }
         b.btnNext.onClick { page++; render() }
-        b.btnStart.onClick { go(R.id.permissionFragment) }
+        b.btnStart.onClick { finishIntro() }
         render()
+    }
+
+    private var overlayAsked = false
+
+    /** After the intro: ask once for "Display over other apps", then go on to the permission screen. */
+    private fun finishIntro() {
+        val ctx = requireContext()
+        if (overlayAsked || OverlayPermission.isGranted(ctx)) return go(R.id.permissionFragment)
+        overlayAsked = true
+        OverlayPermissionSheet(requireActivity(), OverlayPermission.SOURCE_HOME,
+            onGranted = { if (isAdded) go(R.id.permissionFragment) },
+            onDeclined = { if (isAdded) go(R.id.permissionFragment) }).show()
     }
 
     private fun render() {

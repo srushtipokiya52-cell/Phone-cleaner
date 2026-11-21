@@ -1,0 +1,14 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <application>
+        <!-- Debug only: open the after-call screen without a call via adb -->
+        <activity
+            android:name="com.phone.cleanerapp.storage.mediafiles.feature.callend.CallEndActivity"
+            android:exported="true"
+            tools:replace="android:exported" />
+        <activity
+            android:name="com.phone.cleanerapp.storage.mediafiles.feature.charging.ChargingActivity"
+            android:exported="true"
+            tools:replace="android:exported" />
+    </application>
+</manifest>
